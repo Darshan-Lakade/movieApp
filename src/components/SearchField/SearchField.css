@@ -1,0 +1,30 @@
+.btnstrend{
+    border:none;
+    border-radius: 0px;
+    transition: all 0.5s !important;
+}
+
+.btnstrends{
+    border:none;
+    border-radius: 0px;
+    background-color: rgb(97, 130, 143) !important;
+}
+
+.btnstrends:hover{
+    border-radius: 0px;
+    background-color: rgb(75, 88, 94) !important;
+}
+
+.bg-top{
+    background-color: rgb(23, 80, 117) !important;
+    padding:10px;
+    -webkit-box-shadow: 2px 7px 12px -2px rgba(38,24,38,1);
+    -moz-box-shadow: 2px 7px 12px -2px rgba(38,24,38,1);
+    box-shadow: 2px 7px 12px -2px rgba(38,24,38,1);-shadow: 2px 7px 28px -2px rgba(230,214,230,1);
+    transition: all 0.4s;
+}
+
+.sticky-top{
+
+    transition: all 0.3s;
+}

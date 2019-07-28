@@ -1,0 +1,40 @@
+.bg-color{
+    background: linear-gradient(to right, rgb(255, 230, 230),rgb(170, 187, 194));
+}
+
+.color{
+    color:rgb(27, 24, 24) !important;
+}
+
+.card{
+    height:400px;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+}
+
+.card:hover{
+    transform: scale(1.15);
+    z-index: 1;
+    cursor:pointer;
+}
+
+.card-header{
+    height: 250px;
+}
+
+.card-title{
+    height:24px;
+    overflow-y: hidden;
+    transition: all 0.6s ease-in-out;
+}
+
+.card-title:hover{
+    height:24px;
+    overflow-y: visible;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.Main-color{
+    color:red !important;
+}
