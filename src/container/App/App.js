@@ -48,7 +48,7 @@ class App extends Component {
   componentDidMount(){
 
     // -----Fetching The Trending Movies------
-    fetch(`https://floating-refuge-15051.herokuapp.com/trending`, {
+    fetch(`https://lit-escarpment-24252.herokuapp.com/trending`, {
       method:'post',
       headers:{'Content-Type':'application/json'}
     })
@@ -61,7 +61,7 @@ class App extends Component {
           )
       .catch(err => console.log('error fetching data'))
 
-    fetch(`https://floating-refuge-15051.herokuapp.com/`, {
+    fetch(`https://lit-escarpment-24252.herokuapp.com/`, {
       method:'post',
       headers:{'Content-Type':'application/json'}
     })
@@ -88,7 +88,7 @@ class App extends Component {
 
     this.setState({searchHeader:''})
 
-    fetch(`https://floating-refuge-15051.herokuapp.com/trending`, {
+    fetch(`https://https://lit-escarpment-24252.herokuapp.com/trending`, {
       method:'post',
       headers:{'Content-Type':'application/json'}
     })
@@ -114,7 +114,7 @@ class App extends Component {
 
       this.setState({searchHeader:'All'})
 
-      fetch(`https://floating-refuge-15051.herokuapp.com/onsearch`, {
+      fetch(`https://lit-escarpment-24252.herokuapp.com/onsearch`, {
         method:'post',
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify({
@@ -140,7 +140,7 @@ class App extends Component {
     this.state.movies.map(movie => {
       if(movie.id === idMovie){
         this.setState({route:'Movie-Page'})
-        fetch(`https://floating-refuge-15051.herokuapp.com/view`, {
+        fetch(`https://lit-escarpment-24252.herokuapp.com/view`, {
           method:'post',
           headers:{'Content-Type':'application/json'},
           body:JSON.stringify({
@@ -160,7 +160,7 @@ class App extends Component {
     this.state.relatedMovies.map(movie => {
       if(movie.id === idMovie){
         this.setState({route:'Movie-Page'})
-        fetch(`https://floating-refuge-15051.herokuapp.com/view`, {
+        fetch(`https://lit-escarpment-24252.herokuapp.com/view`, {
           method:'post',
           headers:{'Content-Type':'application/json'},
           body:JSON.stringify({
@@ -182,7 +182,7 @@ class App extends Component {
   componentDidUpdate(prevProps,prevState) {
     if (prevState.imdbID !== this.state.imdbID) {
       this.setState({imdbID:this.state.imdbID});
-      fetch(`https://floating-refuge-15051.herokuapp.com/viewupdate`, {
+      fetch(`https://lit-escarpment-24252.herokuapp.com/viewupdate`, {
           method:'post',
           headers:{'Content-Type':'application/json'},
           body:JSON.stringify({
@@ -212,7 +212,7 @@ class App extends Component {
     if(this.state.searchPath === 'trending'){
         this.setState({pagesEnd:6});
         this.setState({pagesStart:1});
-        return fetch(`https://floating-refuge-15051.herokuapp.com/trending`, {
+        return fetch(`https://lit-escarpment-24252.herokuapp.com/trending`, {
           method:'post',
           headers:{'Content-Type':'application/json'}
         })
@@ -226,7 +226,7 @@ class App extends Component {
     if(this.state.searchPath === 'searched'){
         this.setState({pagesEnd:6});
         this.setState({pagesStart:1});
-        return fetch(`https://floating-refuge-15051.herokuapp.com/onsearchpage`, {
+        return fetch(`https://lit-escarpment-24252.herokuapp.com/onsearchpage`, {
           method:'post',
           headers:{'Content-Type':'application/json'},
           body:JSON.stringify({
@@ -243,7 +243,7 @@ class App extends Component {
     if(this.state.searchPath === 'Action'){
       this.setState({pagesEnd:6});
       this.setState({pagesStart:1});
-      return fetch(`https://floating-refuge-15051.herokuapp.com/genrepage`, {
+      return fetch(`https://lit-escarpment-24252.herokuapp.com/genrepage`, {
         method:'post',
         headers:{'Content-Type':'application/json'},
       })
@@ -261,7 +261,7 @@ class App extends Component {
 
     this.setState({movies:[]})
     if(this.state.searchPath === 'trending'){
-      return fetch(`https://floating-refuge-15051.herokuapp.com/pagestrending`, {
+      return fetch(`https://lit-escarpment-24252.herokuapp.com/pagestrending`, {
         method:'post',
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify({
@@ -275,7 +275,7 @@ class App extends Component {
     .catch(err => console.log('data not found'))
     }
     if(this.state.searchPath === 'searched'){
-      return fetch(`https://floating-refuge-15051.herokuapp.com/pagessearch`, {
+      return fetch(`https://lit-escarpment-24252.herokuapp.com/pagessearch`, {
         method:'post',
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify({
@@ -290,7 +290,7 @@ class App extends Component {
     .catch(err => console.log('data not found'))
     }
     if(this.state.searchPath === 'Action'){
-      return fetch(`https://floating-refuge-15051.herokuapp.com/pagesgenre`, {
+      return fetch(`https://lit-escarpment-24252.herokuapp.com/pagesgenre`, {
         method:'post',
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify({
@@ -355,7 +355,7 @@ class App extends Component {
     this.setState({searchHeader:genre})
     this.setState({searchPath:'Action'})
     this.setState({movies:[]})
-    return fetch(`https://floating-refuge-15051.herokuapp.com/genre`, {
+    return fetch(`https://lit-escarpment-24252.herokuapp.com/genre`, {
       method:'post',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
