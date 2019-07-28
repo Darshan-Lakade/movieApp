@@ -61,19 +61,19 @@ class App extends Component {
           )
       .catch(err => console.log('error fetching data'))
 
-  //   fetch(`https://floating-refuge-15051.herokuapp.com/`, {
-  //     method:'post',
-  //     headers:{'Content-Type':'application/json'}
-  //   })
-  //     .then(res => res.json())
-  //     .then(data => this.setState({relatedMovies:data.results})
-  //     )
-  //     .catch(err => console.log(err))
+    fetch(`https://floating-refuge-15051.herokuapp.com/`, {
+      method:'post',
+      headers:{'Content-Type':'application/json'}
+    })
+      .then(res => res.json())
+      .then(data => this.setState({relatedMovies:data.results})
+      )
+      .catch(err => console.log(err))
 
-  //     for(let i = 1; i <= 1000; i++){
-  //       this.state.totalMovieResults.push(i)
-  //     }
-  // }
+      for(let i = 1; i <= 1000; i++){
+        this.state.totalMovieResults.push(i)
+      }
+  }
 
   /* -----Input Box , SearchField------ */
   onInputChange = (e) => {
