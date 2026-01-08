@@ -14,7 +14,7 @@
     "react-dom": "^16.8.2",
     "react-responsive-carousel": "^3.1.47",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.5",
+    "react-scripts": "5.0.1",
     "react-slick": "^0.23.2",
     "react-slide-toggle": "^0.2.3",
     "react-spinners": "^0.5.1",
